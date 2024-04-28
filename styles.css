@@ -283,9 +283,12 @@ nav ul li.active a {
 #intro {
     padding: 1.5rem 0;
     margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #intro h2 {
+    width: 100%;
     font-size: 2.5rem;
     color: var(--black);
     margin-bottom: 16px;
@@ -293,6 +296,7 @@ nav ul li.active a {
 }
 
 #intro p {
+    width: 100%;
     padding: 0 20px;
     line-height: 2;
     text-align: left;
@@ -301,11 +305,13 @@ nav ul li.active a {
 }
 
 #img-grid {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
     margin-bottom: 20px;
 }
+
 
 #img-grid img,
 #img-grid picture {
@@ -326,12 +332,14 @@ nav ul li.active a {
 
 #plan>div {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;    
     align-items: center;
     justify-content: center;
 }
 
 #plan>div>section {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -340,7 +348,6 @@ nav ul li.active a {
     margin: 10px 0;
     padding: 10px;
     border-radius: 10px;
-    width: 100%;
     padding: 2rem 0;
     border: solid 2px var(--white);
 
@@ -396,18 +403,135 @@ q {
 
 #testimonials>div {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
     align-items: center;
-
+    justify-content: center;
 }
 
 #testimonials section {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 60%;
+    width: 70%;
     margin-bottom: 10px;
 
 }
+
+#about {
+    background-color: var(--blue);
+    padding: 1rem 2rem;
+}
+
+#about h3 {
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+}
+
+#about>div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+#about>div>section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#about img {
+    width: 125px;
+    height: 125px;
+}
+
+/* medium screen */
+@media (min-width: 700px) {
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px;
+
+    }
+
+    #img-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        padding: 0 20px;
+
+    }
+
+    #img-grid picture {
+        grid-column: 1 / span 2;
+    }
+
+    #about>div>section {
+        width: 25%;
+
+
+    }
+
+    #testimonials div {
+
+        justify-content: space-around;
+    }
+
+    #testimonials section {
+        width: 40%;
+    }
+#plan>div{
+        justify-content: space-between;
+
+    }
+    #plan>div>section{
+        width:48%;
+
+    }
+}
+
+/* big screen */
+
+@media (min-width: 1000px) {
+
+#about>div {
+        justify-content: center;
+
+
+    }
+    #about>div>section {
+        width: 10%;        
+
+
+    }
+
+    #testimonials div {
+
+        justify-content: space-around;
+    }
+
+    #testimonials section {
+        width: 25%;
+    }
+
+    #plan>div {
+        justify-content: space-between;
+
+    }
+
+    #plan>div>section {
+        width: 24%;
+
+    }
+}
+
+
