@@ -1,4 +1,5 @@
 /* Rana Ali */
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Montserrat:wght@400;700&display=swap');
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -135,3 +136,253 @@ table {
     border-spacing: 0;
 }
 
+
+
+
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Molle', cursive;
+}
+
+h4,
+p,
+q,
+small,
+nav,
+button,
+form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* Base styles */
+body {
+    margin: 0;
+    background-color: var(--white);
+}
+
+header {
+    background-image: linear-gradient(var(--teal), var(--white));
+    color: var(--dark-gray);
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+}
+
+#logo img {
+    width: 150px;
+    padding: 20px 0;
+    height: auto;
+}
+
+header h1 {
+    font-family: 'Molle', cursive;
+    font-style: italic;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+header p {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+}
+
+
+
+/* Navigation styles */
+nav {
+    position: relative;
+}
+
+#menu-toggle {
+    display: block;
+    /* Display the menu toggle */
+    position: absolute;
+    /* Position it over the top right */
+    top: 10px;
+    /* Align with the top padding of the header */
+    right: 0;
+    z-index: 1000;
+    /* Align with the right padding of the header */
+}
+
+#menu-toggle label {
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--yellow);
+    /* Yellow background */
+    color: var(--dark-gray);
+    /* Dark gray text */
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Hide the default checkbox */
+#toggle {
+    display: none;
+}
+
+/* Menu item styles */
+nav ul {
+    display: none;
+    /* Hide the menu by default */
+    list-style: none;
+    /* Remove default list styling */
+    padding-left: 0;
+    /* Remove default padding */
+}
+
+/* Show menu when checkbox is checked */
+#toggle:checked+label+ul {
+    display: block;
+    /* Show the menu */
+}
+
+nav ul li {
+    margin-bottom: 10px;
+    /* Spacing between menu items */
+}
+
+nav ul li a {
+    color: var(--dark-gray);
+    /* Dark gray text */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+/* Active menu item styles */
+nav ul li.active a {
+    color: var(--yellow);
+    /* Yellow text for active item */
+}
+
+
+
+#intro {
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+#intro h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 16px;
+    padding: 0 20px;
+}
+
+#intro p {
+    padding: 0 20px;
+    line-height: 2;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+#img-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+}
+
+#img-grid img,
+#img-grid picture {
+    width: 100%;
+    height: auto;
+}
+
+#plan {
+    background-color: var(--yellow);
+    padding: 1rem 2rem;
+
+}
+
+#plan h3 {
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+}
+
+#plan>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#plan>div>section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--teal);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    padding: 2rem 0;
+    border: solid 2px var(--white);
+
+}
+
+
+#plan h4 {
+    color: var(--black);
+    text-align: center;
+    font-weight: 600;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+#plan img {
+    display: block;
+    padding: 20px;
+    height: 150px;
+}
+
+#testimonials {
+    padding: 1rem 2rem;
+
+}
+#testimonials h3{
+    font-size: 2.5rem;
+        margin: 1.5rem 0;
+}
+
+
+#testimonials>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#testimonials section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+justify-content: center;    text-align: center;
+    width:50%;
+
+}
