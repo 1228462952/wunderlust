@@ -365,11 +365,34 @@ nav ul li.active a {
     padding: 1rem 2rem;
 
 }
-#testimonials h3{
+
+#testimonials h3 {
     font-size: 2.5rem;
-        margin: 1.5rem 0;
+    margin: 1.5rem 0;
 }
 
+#testimonials h4 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+}
+
+#testimonials p,
+q {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+#testimonials q {
+    font-style: italic;
+}
+
+#testimonials q::before,
+#testimonials q::after {
+    content: "\"";
+}
 
 #testimonials>div {
     display: flex;
@@ -378,11 +401,13 @@ nav ul li.active a {
 
 }
 
-#testimonials section{
+#testimonials section {
     display: flex;
     flex-direction: column;
     align-items: center;
-justify-content: center;    text-align: center;
-    width:50%;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 10px;
 
 }
